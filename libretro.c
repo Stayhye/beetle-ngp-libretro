@@ -370,23 +370,9 @@ static void check_color_depth(void)
 
       if (environ_cb(RETRO_ENVIRONMENT_SET_PIXEL_FORMAT, &rgb555))
       {
-#if defined(ABGR1555)
-         if(log_cb) log_cb(RETRO_LOG_INFO, "Using ABGR1555 pixel format configuration for PS2.\n");
-         RETRO_PIX_DEPTH = 15;
-         
-         // Force Mednafen's surface pixel format to render in ABGR1555 layout
-         surf.format.bpp = 2;
-         surf.format.colorspace = MDFN_COLORSPS_RGB; // or depending on how your core defines it, but shifting masks controls the bits
-         surf.format.Rshift = 10;
-         surf.format.Gshift = 5;
-         surf.format.Bshift = 0;
-         surf.format.Rprec = 5;
-         surf.format.Gprec = 5;
-         surf.format.Bprec = 5;
-#else
          if(log_cb) log_cb(RETRO_LOG_INFO, "Using default 0RGB1555 pixel format.\n");
+
          RETRO_PIX_DEPTH = 15;
-#endif
       }
 #endif
 }
