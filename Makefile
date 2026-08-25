@@ -225,7 +225,7 @@ else ifeq ($(platform), ps2)
    CC = ee-gcc$(EXE_EXT)
    CXX = ee-g++$(EXE_EXT)
    AR = ee-ar$(EXE_EXT)
-   FLAGS += -DPS2 -G0 -DABGR1555
+   FLAGS += -DPS2 -G0 -DARGB565
    STATIC_LINKING = 1
    STATIC_LINKING_LINK = 1
    FRONTEND_SUPPORTS_RGB565 = 1
