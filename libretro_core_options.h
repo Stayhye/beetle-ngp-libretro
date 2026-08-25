@@ -72,9 +72,8 @@ struct retro_core_option_definition option_defs_us[] = {
       },
       "english",
    },
-   { NULL, NULL, NULL, { NULL, NULL }, NULL },
+   { NULL, NULL, NULL, { { NULL, NULL } }, NULL },
 };
-
 /* RETRO_LANGUAGE_JAPANESE */
 
 /* RETRO_LANGUAGE_FRENCH */
