@@ -604,7 +604,7 @@ void retro_run(void)
    height = spec.DisplayRect.h;
 #if defined(ABGR1555)
    // Swap Red and Blue bits for 16-bit 0RGB1555 -> ABGR1555
-   uint16_t *pixels = (uint16_t *)surf.pixels16; // Adjust pointer if named differently
+   uint16_t *pixels = (uint16_t *)surf->pixels16;
    for (int i = 0; i < width * height; i++) {
       uint16_t p = pixels[i];
       pixels[i] = (p & 0x8000) | ((p & 0x001F) << 10) | (p & 0x03E0) | ((p & 0x7C00) >> 10);
